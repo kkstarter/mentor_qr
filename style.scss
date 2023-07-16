@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+$theme-colors: (
+    "background": hsl(212, 45%, 89%),
+    "tab": hsl(0, 0%, 100%),
+    "header": hsl(218, 44%, 22%),
+    "unfocused-text": hsl(220, 15%, 55%),
+);
+
+html body {
+    font-family: "Outfit", sans-serif, system-ui;
+    margin: 0;
+    background: map-get($theme-colors, "background");
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border-radius: 20px;
+    height: 500px;
+    width: 320px;
+    background: map-get($theme-colors, "tab");
+
+}
+
+.tray {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+
+    img {
+        width: 290px;
+        border-radius: 12px;
+    }
+
+    h3 {
+        margin-top: 23px;
+        margin-bottom: 13px;
+        font-size: 22px;
+        font-weight: 700;
+        color: map-get($theme-colors, "header");
+        text-align: center;
+    }
+
+    p {
+        margin: 0;
+        font-size: 15px;
+        color: map-get($theme-colors, "unfocused-text");
+        text-align: center;
+    }
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
